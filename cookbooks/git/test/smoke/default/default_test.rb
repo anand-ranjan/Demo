@@ -19,10 +19,10 @@
 #
 
 describe command('which git') do
-	its( 'stdout' ) { should eq '/usr/bin/git' }
+	its( 'stdout' ) { should eq "/usr/bin/git\n" }
 end
 
 describe command('git --version') do
 	its('exit_status') { should be == 0 }
-	its('stdout') { should match /git version 2.*.*/ }
+	its('stdout') { should match /git version 1.*.*/ }
 end
